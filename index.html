@@ -1,12 +1,119 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Peter Duska Portfolio</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 
-        <h1>Peter Duska</h1>
-        <p>Welcome to my new site! :)</p>
-        <p> Riso to je totalny cvok</p>
-    </body>
+
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Duska Portfolio</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <h1 class="brand">Peter Duska</h1>
+        <a href="#first-game">Project Icarus</a>
+        <a href="#second-game">Connect It</a>
+        <a href="#third-game">My Third Game</a>
+        <a href="#fourth-game">Belnder</a>
+        <a href="#contact-section">Contact Section</a>
+      </nav>
+    </header>
+    
+    <div class="container">
+      <div class="section" id="first-game">
+        <div class="section-label">3D Space Shooter</div>
+        <div class="section-content">
+          <h2>Project Icarus</h2>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="Videos/Icarus_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-description">
+            3D Top down Space shooter made in Unity. Everything is made from scrach by me.
+          </p>
+          <div class="image-gallery">
+            <img src="Images/Icarus_1.jpg" alt="First Image">
+            <img src="Images/Icarus_2.jpg" alt="Second Image">
+            <img src="Images/Icarus_3.jpg" alt="Third Image">
+            <img src="Images/Icarus_4.jpg" alt="Fourth Image">
+          </div>
+        </div>
+      </div>
+  
+      <div class="section-separator"></div>
+  
+      <div class="section" id="second-game">
+        <div class="section-label">2D Puzzle Platformer</div>
+        <div class="section-content">
+          <h2>Connect It</h2>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="Videos/Connect_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-description">
+            2D Puzzle Platformer made for Gamejam in 5 days.
+          </p>
+          <div class="image-gallery">
+            <img src="Images/Connect_1.png" alt="First Image">
+            <img src="Images/Connect_2.png" alt="Second Image">
+            <img src="Images/Connnect_3.png" alt="Third Image">
+          </div>
+        </div>
+      </div>
+  
+      <div class="section-separator"></div>
+  
+      <div class="section" id="third-game">
+        <div class="section-label">Blender</div>
+        <div class="section-content">
+          <h2>My Third Game</h2>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="path/to/your-third-game-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-description">
+            Aliquam non mauris nec lectus tincidunt luctus. Suspendisse potenti. Integer hendrerit tristique dui ac mattis.
+          </p>
+          <img src="path/to/your-third-game-screenshot.jpg" alt="Third Game Screenshot">
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="fourth-game">
+        <div class="section-label">Blender</div>
+        <div class="section-content">
+          <h2>Blender</h2>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="path/to/your-third-game-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-description">
+            Aliquam non mauris nec lectus tincidunt luctus. Suspendisse potenti. Integer hendrerit tristique dui ac mattis.
+          </p>
+          <img src="path/to/your-third-game-screenshot.jpg" alt="Third Game Screenshot">
+        </div>
+      </div>
+    </div>
+  
+    <!-- Contact Section -->
+    <div class="contact-section" id="contact-section">
+      <h2>Contact Me</h2>
+      <p>If you have any questions or inquiries, feel free to get in touch:</p>
+      <p>Email: <a href="mailto:peto.duska@gmail.com">peto.duska@gmail.com</a></p>
+      <!--<p>Phone: <a href="tel:+1234567890">+1234567890</a></p>-->
+      <p>Peter Duska.</p>
+    </div>
+  </body>
 </html>
