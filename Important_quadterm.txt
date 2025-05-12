@@ -1,0 +1,221 @@
+
+
+//Myska-------------------------------------------------------------
+this.setOnMouseClicked(event -> {
+	System.out.println(event.X);
+});
+
+//Klavestnica-------------------------------------------------------
+root.setOnKeyPressed(event -> {
+	if (event.getCode() == KeyCode.Q) {
+		System.out.println("pressed Q")
+	}
+
+});
+
+
+//Button-------------------------------------------------------------
+Button btn = new Button("Name");
+btn.setOnAction(e -> { 
+	System.out.println("button pressed")
+});
+
+//Timeline------------------------------------------------------------
+Timeline animation = new Timeline(new KeyFrame(Duration.millis(16), e -> {
+	for (Kyvadlo k : Kyvadla.ks) {
+		k.update();
+	}
+	panel.paintBallPane();
+}));
+animation.setCycleCount(Timiline.INDEFINITE);
+animation.play();
+
+//PauseTransition------------------------------------------------------
+PauseTransition pause = new PauseTransition(Duration.seconds(10));
+pause.setOnFinished(e -> {
+	System.out.println("Pause Finished");
+});
+
+
+
+//Image--------------------------------------------------------------
+ImageView obrazok = karticka.img;
+getChildren().add(obrazok);
+
+
+//Rectangle-----------------------------------------------------------
+getChildren().clear();
+Rectangle rectangle = new Rectangle(0, 100, w, h); // (0, 100) top left corner
+rectangle.setFill(Color.GRAY);
+rectangle.setStroke(Color.BLACK);
+rectangle.setStrokeWidth(2);
+getChildren().add(rectangle);
+
+//Line-----------------------------------------------------------------
+getChildren().clear();
+Line line = new Line(x1, y1, x2, y2);
+line.setStroke(Color.BLACK);
+getChildren().add(line);
+
+//Circle---------------------------------------------------------------
+Circle circle = new Circle(x, y, radius)
+circle.setFill(Color.RED);
+getChildren().add(circle);
+
+
+//Scene-----------------------------------------------------------
+public class App extends Application {
+	public void start(Stage primaryStage) {
+		MyPane panel = new MyPane();
+		Scene scene = new Scene(panel, 500, 500);
+
+		primaryStage.SetTitle("Title");
+		primaryStage.setScene(scene);
+		primaryStage.show();
+
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+//Canvas---------------------------------------------------------------
+        Canvas canvas = new Canvas(300, 200);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+
+        // Draw a blue circle manually
+        gc.setFill(Color.BLUE);
+        gc.fillOval(60, 60, 80, 80);
+
+        StackPane root = new StackPane(canvas);
+        Scene scene = new Scene(root, 300, 200);
+
+        stage.setTitle("Canvas Example");
+        stage.setScene(scene);
+        stage.show();
+
+//AnimationTimer-----------------------------------------------------------
+new AnimationTimer() {
+    @Override
+    public void handle(long now) {
+        // update positions, redraw, handle input, etc.
+    }
+}.start();
+
+
+
+//Example Pane--------------------------------------------------------------
+public class BallPaneHold extends Application {
+    private double x = 200;
+    private double y = 200;
+    private final double radius = 20;
+    private final double step = 3;
+
+    private final Set<KeyCode> keysPressed = new HashSet<>();
+
+    @Override
+    public void start(Stage stage) {
+        Pane root = new Pane();
+        Circle ball = new Circle(x, y, radius, Color.BLUE);
+        root.getChildren().add(ball);
+
+        Scene scene = new Scene(root, 400, 400);
+
+        // Track key pressed/released
+        scene.setOnKeyPressed(e -> keysPressed.add(e.getCode()));
+        scene.setOnKeyReleased(e -> keysPressed.remove(e.getCode()));
+
+        // Animation loop
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                if (keysPressed.contains(KeyCode.W)) y -= step;
+                if (keysPressed.contains(KeyCode.S)) y += step;
+                if (keysPressed.contains(KeyCode.A)) x -= step;
+                if (keysPressed.contains(KeyCode.D)) x += step;
+                ball.setCenterX(x);
+                ball.setCenterY(y);
+            }
+        }.start();
+
+        stage.setTitle("Pane - Hold WASD");
+        stage.setScene(scene);
+        stage.show();
+        root.requestFocus();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
+
+
+//Example Canvas--------------------------------------------------------------
+public class BallCanvasHold extends Application {
+    private double x = 200;
+    private double y = 200;
+    private final double radius = 20;
+    private final double step = 3;
+
+    private final Set<KeyCode> keysPressed = new HashSet<>();
+
+    @Override
+    public void start(Stage stage) {
+        Canvas canvas = new Canvas(400, 400);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+
+        Scene scene = new Scene(new StackPane(canvas));
+
+        scene.setOnKeyPressed(e -> keysPressed.add(e.getCode()));
+        scene.setOnKeyReleased(e -> keysPressed.remove(e.getCode()));
+
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                if (keysPressed.contains(KeyCode.W)) y -= step;
+                if (keysPressed.contains(KeyCode.S)) y += step;
+                if (keysPressed.contains(KeyCode.A)) x -= step;
+                if (keysPressed.contains(KeyCode.D)) x += step;
+                drawBall(gc);
+            }
+        }.start();
+
+        stage.setTitle("Canvas - Hold WASD");
+        stage.setScene(scene);
+        stage.show();
+        canvas.requestFocus();
+    }
+
+    private void drawBall(GraphicsContext gc) {
+        gc.clearRect(0, 0, 400, 400);
+        gc.setFill(Color.BLUE);
+        gc.fillOval(x - radius, y - radius, radius * 2, radius * 2);
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
