@@ -3,161 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Peter Duska | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Space+Grotesk:wght@500;600;700&family=Monoton&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="hero">
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header id="top" class="hero">
+        <nav class="nav container">
+            <a href="#top">Peter Duska</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#game-projects">Game Dev</a>
+                <a href="#stack">Tech Stack</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
-        <div class="hero-content">
-            <h1 class="fade-in">Hi, I'm Peter Duska</h1>
-            <p class="fade-in">Aspiring Game Developer & Computer Science Enthusiast</p>
 
-            <!--<a href="#projects" class="cta">View My Work</a>-->
+        <div class="hero-content container">
+            <div class="hero-copy reveal">
+                <h1>Welcome to my portfolio</h1>
+                <div class="hero-actions">
+                    <a class="btn" href="#projects">Projects</a>
+                    <a class="btn ghost" href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal delay-1" aria-hidden="true">
+                <div class="banter-loader">
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="about">
-        <h2 class="fade-in"></h2>
-        <p class="fade-in"></p>
-    </section>
-
-
-    <section id="projects">
-        <!-- Project 1 -->
-        <div class="project-section fade-in"> <!-- class="project-section fade-in" -->
-            <h3>Top Down 3D Space Shooter</h3>
-            <br>
-            <div class="project-content">
-                <iframe
-                    src="https://www.youtube.com/embed/00vd0Wv4bG8?autoplay=1&mute=1"
-                    title="YouTube video"
-                    allowfullscreen>
-                </iframe>
-                <div class="project-images">
-                    <img src="Images/Icarus_1.jpg" alt="Project 1 Image 1">
-                    <img src="Images/Icarus_2.jpg" alt="Project 1 Image 2">
-                    <img src="Images/Icarus_3.jpg" alt="Project 1 Image 1">
-                    <img src="Images/Icarus_4.jpg" alt="Project 1 Image 2">
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about-layout">
+                    <p class="section-lead">Hi, I’m Peter Duska from Slovakia. I have a degree in Computer Science and I enjoy building clean, usable digital products. Here you can see a selection of my work and projects.</p>
+                    <div class="about-portrait">
+                        <img src="Images/Me/20260108_173656.jpg" alt="Portrait of Peter Duska">
+                        <span class="portrait-mark mark-a"></span>
+                        <span class="portrait-mark mark-b"></span>
+                    </div>
                 </div>
             </div>
-            <br>
-            <p>3D Top down Space shooter made in Unity. Everything is made from scrach by me.</p>
-        </div>
+        </section>
 
-        <!-- Project 2 -->
-        <div class="project-section fade-in"> <!-- class="project-section fade-in" -->
-            <h3>Geometry defense</h3>
-            <br>
-            <div class="project-content">
-                <iframe
-                    src="https://www.youtube.com/embed/ramPYUd1NBw?autoplay=1&mute=1"
-                    title="YouTube video"
-                    allowfullscreen>
-                </iframe>
-                <div class="project-images">
-                    <img src="Images/Icon.png" alt="Project 1 Image 1">
+        <section id="experience" class="section alt">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content">
+                            <span class="item-year">Realtime, s.r.o.  / June 2025 - Currently</span>
+                            <h3>Fullstack Developer</h3>
+                            <p class="item-meta">Developing websites for clients using PHP, Vue, SQL.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal delay-1">
+                        <div class="timeline-content">
+                            <span class="item-year">Jungle Frog  / April 2024 - April 2025</span>
+                            <h3>Game Developer</h3>
+                            <p class="item-meta">Designs, develops, and optimizes games using Unity, focusing on gameplay mechanics, visuals, and performance.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal delay-2">
+                        <div class="timeline-content">
+                            <span class="item-year">VI Group / August 2023 - March 2024</span>
+                            <h3>Junior Backend Developer</h3>
+                            <p class="item-meta">Develops and maintains server-side logic, databases, and APIs to ensure efficient and scalable application functionality.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal delay-3">
+                        <div class="timeline-content">
+                            <span class="item-year">VI Group / January 2023 - August 2023</span>
+                            <h3>Junior Software Integration Specialist</h3>
+                            <p class="item-meta">Implementing and optimizing RealPad software within the firm.</p>
+                        </div>
+                    </div>
                 </div>
-            <br>
-            <p>2D Idle "Tower defense" game made in Unity</p>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Some of the projects I worked on</h2>
+                <div class="project-rows project-rows-large">
+                    <article class="project-row reveal">
+                        <div class="project-media slider" data-slider>
+                            <button class="slider-btn prev" type="button" aria-label="Previous image" data-prev>&larr;</button>
+                            <div class="slider-track">
+                                <img class="slide is-active" src="Images/VigroupPortal/Screenshot%202026-01-08%20163216.png" alt="Customer complaint portal screenshot 1">
+                                <img class="slide" src="Images/VigroupPortal/Screenshot%202026-01-08%20163307.png" alt="Customer complaint portal screenshot 2">
+                                <img class="slide" src="Images/VigroupPortal/Screenshot%202026-01-08%20163334.png" alt="Customer complaint portal screenshot 3">
+                            </div>
+                            <button class="slider-btn next" type="button" aria-label="Next image" data-next>&rarr;</button>
+                        </div>
+                        <div class="project-info">
+                            <h3>Customer Complaint Portal</h3>
+                            <p class="item-meta">Portal for a Slovak real estate developer where customers submit complaints and the firm manages them.</p>
+                            <a class="project-link" href="https://www.vigroupportal.com" target="_blank" rel="noopener">Visit site</a>
+                        </div>
+                    </article>
+                    <article class="project-row reverse reveal delay-1">
+                        <div class="project-media slider" data-slider>
+                            <button class="slider-btn prev" type="button" aria-label="Previous image" data-prev>&larr;</button>
+                            <div class="slider-track">
+                                <img class="slide is-active" src="Images/VigroupJedlo/Screenshot%202026-01-08%20163421.png" alt="Canteen preorder portal screenshot 1">
+                                <img class="slide" src="Images/VigroupJedlo/Screenshot%202026-01-08%20171024.png" alt="Canteen preorder portal screenshot 2">
+                            </div>
+                            <button class="slider-btn next" type="button" aria-label="Next image" data-next>&rarr;</button>
+                        </div>
+                        <div class="project-info">
+                            <h3>Canteen Preorder Portal</h3>
+                            <p class="item-meta">Internal portal where employees pre-order food for the canteen.</p>
+                            <a class="project-link" href="https://www.obedy.vigroup.sk" target="_blank" rel="noopener">Visit site</a>
+                        </div>
+                    </article>
+                    <article class="project-row reveal delay-2 wordgame-row">
+                        <div class="project-media slider" data-slider>
+                            <button class="slider-btn prev" type="button" aria-label="Previous image" data-prev>&larr;</button>
+                            <div class="slider-track">
+                                <img class="slide is-active" src="Images/Wordgame/Screenshot%202026-01-08%20164055.png" alt="Wordgame project screenshot">
+                            </div>
+                            <button class="slider-btn next" type="button" aria-label="Next image" data-next>&rarr;</button>
+                        </div>
+                        <div class="project-info">
+                            <h3>Wordgame</h3>
+                            <p class="item-meta">Quick word puzzle with clean rounds and score chasing.</p>
+                            <a class="project-link" href="https://www.word-game.space.com" target="_blank" rel="noopener">Visit site</a>
+                        </div>
+                    </article>
+                    <article class="project-row reverse reveal delay-3">
+                        <div class="project-media slider" data-slider>
+                            <button class="slider-btn prev" type="button" aria-label="Previous image" data-prev>&larr;</button>
+                            <div class="slider-track">
+                                <img class="slide is-active" src="Images/Calculator/Screenshot%202026-01-08%20163912.png" alt="Handwriting solver screenshot">
+                            </div>
+                            <button class="slider-btn next" type="button" aria-label="Next image" data-next>&rarr;</button>
+                        </div>
+                        <div class="project-info">
+                            <h3>Handwriting Solver</h3>
+                            <p class="item-meta">ML + Web App</p>
+                            <p class="item-meta">Trained a model to recognize handwritten equations.</p>
+                            <a class="project-link" href="https://ml-project-cqbr.onrender.com/index.html" target="_blank" rel="noopener">Visit site</a>
+                        </div>
+                    </article>
+                    <article class="project-row reveal delay-4">
+                        <div class="project-media slider" data-slider>
+                            <button class="slider-btn prev" type="button" aria-label="Previous image" data-prev>&larr;</button>
+                            <div class="slider-track">
+                                <img class="slide is-active" src="Images/UML/Screenshot%202026-01-08%20201748.png" alt="UML animator screenshot 1">
+                                <img class="slide" src="Images/UML/Screenshot%202026-01-08%20201905.png" alt="UML animator screenshot 2">
+                            </div>
+                            <button class="slider-btn next" type="button" aria-label="Next image" data-next>&rarr;</button>
+                        </div>
+                        <div class="project-info">
+                            <h3>UML Animator</h3>
+                            <p class="item-meta">Tool for animating UML diagrams.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-projects" class="section alt">
+            <div class="container">
+                <h2 class="section-title">Game Development</h2>
+                <div class="project-rows">
+                    <article class="project-row reveal">
+                        <div class="video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/00vd0Wv4bG8?autoplay=1&mute=1"
+                                title="Top Down 3D Space Shooter video"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Top Down 3D Space Shooter</h3>
+                            <p class="item-meta">Unity</p>
+                        </div>
+                    </article>
+                    <article class="project-row reverse reveal delay-1">
+                        <div class="video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/ramPYUd1NBw?autoplay=1&mute=1"
+                                title="Geometry Defense video"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Geometry Defense</h3>
+                            <p class="item-meta">Unity</p>
+                        </div>
+                    </article>
+                    <article class="project-row reveal delay-2">
+                        <div class="video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/Hsih-Qiz9qQ?autoplay=1&mute=1"
+                                title="Connect IT video"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Connect IT</h3>
+                            <p class="item-meta">Game Jam</p>
+                        </div>
+                    </article>
+                    <article class="project-row reverse reveal delay-3">
+                        <div class="video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/lYOGvOE_120?autoplay=1&mute=1"
+                                title="Procedural City Generator video"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Procedural City Generator</h3>
+                            <p class="item-meta">Prototype</p>
+                        </div>
+                    </article>
+                    <article class="project-row reveal delay-4">
+                        <div class="video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/6IkYTc1GjlA?autoplay=1&mute=1"
+                                title="Dominos Android Game video"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Dominos Android Game</h3>
+                            <p class="item-meta">Mobile</p>
+                        </div>
+                    </article>
+                    <article class="project-row reverse reveal delay-5">
+                        <div class="video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/p0shNcNvGdM?autoplay=1&mute=1"
+                                title="Simple 3D Rogue Like video"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Simple 3D Rogue Like</h3>
+                            <p class="item-meta">Unreal Engine</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="stack" class="section">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="stack-grid">
+                    <div class="stack-item reveal">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="stack-item reveal delay-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="stack-item reveal delay-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel">
+                        <span>Laravel</span>
+                    </div>
+                    <div class="stack-item reveal delay-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="stack-item reveal delay-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="stack-item reveal delay-5">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="stack-item reveal delay-6">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#">
+                        <span>C#</span>
+                    </div>
+                    <div class="stack-item reveal delay-7">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                        <span>C++</span>
+                    </div>
+                    <div class="stack-item reveal delay-8">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
+                        <span>Java</span>
+                    </div>
+                    <div class="stack-item reveal delay-9">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue">
+                        <span>Vue</span>
+                    </div>
+                    <div class="stack-item reveal delay-10">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="stack-item reveal delay-11">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+                        <span>CSS</span>
+                    </div>
+                    <div class="stack-item reveal delay-12">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" alt="Unity">
+                        <span>Unity</span>
+                    </div>
+                    <div class="stack-item reveal delay-13">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="contact">
+        <div class="container contact-inner">
+            <div>
+                <h2 class="section-title">Contact</h2>
+                <p class="section-lead">peto.duska@gmail.com</p>
+            </div>
+            <div class="contact-actions">
+                <a class="btn" href="mailto:peto.duska@gmail.com">Send email</a>
             </div>
         </div>
-
-        <!-- Project 3 -->
-        <div class="project-section fade-in"> <!-- class="project-section fade-in" -->
-            <h3>Connect IT</h3>
-            <br>
-            <div class="project-content">
-                <iframe
-                    src="https://www.youtube.com/embed/Hsih-Qiz9qQ?autoplay=1&mute=1"
-                    title="YouTube video"
-                    allowfullscreen>
-                </iframe>
-                <div class="project-images">
-                    <img src="Images/Connect_1.png" alt="Project 1 Image 1">
-                    <img src="Images/Connect_2.png" alt="Project 1 Image 2">
-                    <img src="Images/Connnect_3.png" alt="Project 1 Image 1">
-                </div>
-            <br>
-            <p>2D Puzzle Platformer made for Gamejam in 5 days.</p>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-section fade-in"> <!-- class="project-section fade-in" -->
-            <h3>Procedural City Generator</h3>
-            <br>
-            <div class="project-content">
-                <iframe
-                    src="https://www.youtube.com/embed/lYOGvOE_120?autoplay=1&mute=1"
-                    title="YouTube video"
-                    allowfullscreen>
-                </iframe>
-                <div class="project-images">
-                    <img src="Images/Zombie_1.png" alt="Project 1 Image 1">
-                    <img src="Images/Zombie_2.png" alt="Project 1 Image 2">
-                    <img src="Images/Zombie_3.png" alt="Project 1 Image 1">
-                    <img src="Images/Zombie_4.png" alt="Project 1 Image 2">
-                    <img src="Images/Zombie_5.png" alt="Project 1 Image 1">
-                </div>
-            <br>
-            <p>2D Puzzle Platformer made for Gamejam in 5 days.</p>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-section fade-in"> <!-- class="project-section fade-in" -->
-            <h3>Dominos Android Game</h3>
-            <br>
-            <div class="project-content">
-                <iframe
-                    src="https://www.youtube.com/embed/6IkYTc1GjlA?autoplay=1&mute=1"
-                    title="YouTube video"
-                    allowfullscreen>
-                </iframe>
-                <div class="project-images">
-
-                </div>
-            <br>
-            <p>Dominos board game made for Android. Contains also player vs. player mode, and bots have three diffuculties.</p>
-            </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-section fade-in"> <!-- class="project-section fade-in" -->
-            <h3>Simple 3D Rougue Like</h3>
-            <br>
-            <div class="project-content">
-                <iframe
-                    src="https://www.youtube.com/embed/p0shNcNvGdM?autoplay=1&mute=1"
-                    title="YouTube video"
-                    allowfullscreen>
-                </iframe>
-                <div class="project-images">
-                    <img src="Images/Shadow_1.png" alt="Project 1 Image 2">
-                    <img src="Images/Shadow_2.png" alt="Project 1 Image 1">
-                    <img src="Images/Shadow_3.png" alt="Project 1 Image 2">
-                    <img src="Images/Shadow_4.png" alt="Project 1 Image 1">
-                </div>
-            <br>
-            <p>Made in unreal engine 5 as a school project</p>
-            </div>
-        </div>
-</section>
-
-    <footer id="contact">
-        <h2 class="fade-in">Contact Me</h2>
-        <p>Email: peto.duska@gmail.com</p>
-        <!--<p>GitHub: <a href="https://github.com/yourprofile">github.com/yourprofile</a></p>-->
     </footer>
-    <a href="Important_quadterm.txt" download>
-      <button>Download file</button>
-    </a>
+
+    <script>
+        const revealItems = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        revealItems.forEach((item) => observer.observe(item));
+
+        document.querySelectorAll('[data-slider]').forEach((slider) => {
+            const slides = Array.from(slider.querySelectorAll('.slide'));
+            const prev = slider.querySelector('[data-prev]');
+            const next = slider.querySelector('[data-next]');
+
+            if (slides.length <= 1) {
+                if (prev) prev.style.display = 'none';
+                if (next) next.style.display = 'none';
+                return;
+            }
+
+            let index = slides.findIndex((slide) => slide.classList.contains('is-active'));
+            if (index < 0) {
+                index = 0;
+                slides[0].classList.add('is-active');
+            }
+
+            const show = (nextIndex) => {
+                slides[index].classList.remove('is-active');
+                index = (nextIndex + slides.length) % slides.length;
+                slides[index].classList.add('is-active');
+            };
+
+            prev.addEventListener('click', () => show(index - 1));
+            next.addEventListener('click', () => show(index + 1));
+        });
+    </script>
 </body>
 </html>
